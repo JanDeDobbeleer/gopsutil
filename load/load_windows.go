@@ -5,7 +5,6 @@ package load
 
 import (
 	"context"
-	"log"
 	"math"
 	"sync"
 	"time"
@@ -37,7 +36,6 @@ func loadAvgGoroutine() {
 
 	counter, err := common.ProcessorQueueLengthCounter()
 	if err != nil || counter == nil {
-		log.Println("gopsutil: unexpected processor queue length counter error, please file an issue on github: err")
 		return
 	}
 
